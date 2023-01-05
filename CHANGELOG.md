@@ -13,6 +13,8 @@ ACCERT plugin via the `PluginACCERT` class
 
 * All plugins now support an `executable` argument to explicitly specify the
   executable to be used ([#75](https://github.com/watts-dev/watts/pull/75))
+* A `verbose` argument has been added to `Plugin.__call__` that controls whether
+  screen output is printed ([#82](https://github.com/watts-dev/watts/pull/82))
 
 ## [0.4.0]
 
