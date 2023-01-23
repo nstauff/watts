@@ -16,7 +16,7 @@ params['cost_217'] = 29000000
 input_name = "ACCERT_input.tmpl"
 
 
-accert_plugin = watts.PluginACCERT(f'{input_name}')
+accert_plugin = watts.PluginACCERT(input_name)
 accert_result = accert_plugin(params)
 
 print(accert_result.inputs)
@@ -27,4 +27,3 @@ print("Total reactor cost [$]: ", accert_result.total_cost)
 print(accert_result.account_table.to_markdown())
 
 params.show_summary(show_metadata=True, sort_by='key')
-
