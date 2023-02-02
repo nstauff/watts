@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2022-2023 UChicago Argonne, LLC
+# SPDX-License-Identifier: MIT
 
 """
 This example demonstrates how to use WATTS to perform 
@@ -12,7 +14,7 @@ import watts
 params = watts.Parameters()
 params['thermal_power'] = 3200
 params['electric_power'] = 1300
-params['cost_217'] = 29000000
+params['cost_217'] = 29_000_000
 input_name = "ACCERT_input.tmpl"
 
 
@@ -23,7 +25,8 @@ print(accert_result.inputs)
 print(accert_result.outputs)
 print("Total reactor cost [$]: ", accert_result.total_cost)
 
-# ### uncomment below to see the ACCERT account table
-print(accert_result.account_table.to_markdown())
+# ### uncomment below to see the ACCERT account table in markdown format
+# ### run `pip install -U pandas-profiling` to install pandas-profiling
+# print(accert_result.account_table.to_markdown())
 
 params.show_summary(show_metadata=True, sort_by='key')
